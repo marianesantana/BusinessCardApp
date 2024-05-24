@@ -46,6 +46,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.busineescardapp.data.Project
+import com.example.busineescardapp.ui.BackgroundGradient
 import com.example.busineescardapp.ui.theme.BusineesCardAppTheme
 import com.example.busineescardapp.ui.theme.BusinessCardVividTang
 
@@ -54,7 +55,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BusineesCardAppTheme {
-                // A surface container using the 'background' color from the theme
+
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -125,7 +126,6 @@ fun CreateBusinessCard(){
         }
     }
 }
-@Preview
 @Composable
 fun Content(){
     val projectsArray = listOf(
@@ -167,7 +167,9 @@ fun Portifolio(data: List<Project>){
                 Row(modifier = Modifier
                     .padding(8.dp)) {
                     CreateImageProfile(modifier = Modifier.size(100.dp), painterResource(id = item.image))
-                    Column(modifier = Modifier.padding(7.dp).align(alignment = Alignment.CenterVertically)) {
+                    Column(modifier = Modifier
+                        .padding(7.dp)
+                        .align(alignment = Alignment.CenterVertically)) {
                         Text(text = item.name, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                         Text(text = item.description, style = MaterialTheme.typography.bodySmall)
 

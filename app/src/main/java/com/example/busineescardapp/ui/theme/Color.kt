@@ -11,3 +11,5 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val BusinessCardVividTang = Color(color = 0xFFff837a)
+val BusinessCardBackground = Color(color = 0xFFF7F7F7)
+val BusinessCardTitle = Color(color = 0xFF1F2D3D)
